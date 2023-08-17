@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificidad</title>
+
+  <style>
+    #titulo { /* 1,0,0 --> Especificidad del selector */ 
+      color: red;
+      background-color: rgba(179, 198, 214, 0.776);
+    }
+
+    /* No se aplica la regla en cascada porque ID es mas fuerte */
+
+    .titulo { /* 0,1,0 */
+      color: green;
+    }
+
+    h1 { /* 0,0,1 */
+      color: blue; /* !important */
+    }
+
+    div {
+      height: 100px;
+      width: 50%;
+      background-color: black;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div>
+    <h1 class="titulo" id="titulo" style="color: rgb(23, 199, 206);">Titulo</h1>
+  </div>
+
+</body>
+
+</html>

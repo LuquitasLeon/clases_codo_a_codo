@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <h1>Practica Clase 3</h1>
+
+  <form action="">
+    <div>
+      <label for="nombre">Nombre y Apellido:</label>
+      <input type="text" placeholder="Ej: José/María" id="nombre">
+    </div>
+
+    <div>
+      <label for="edad">Edad:</label>
+      <input type="text" id="edad">
+    </div>
+
+    <div>
+      <label for="correo">Email:</label>
+      <input type="email" id="correo">
+    </div>
+
+    <div>
+      <label for="motivo">Motivo consulta</label>
+      <select name="consulta" id="motivo">
+        <option value="sug" >Sugerencia</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="preg1">¿Estás cursando?</label>
+      <input type="radio" id="preg1" name="Cursa">Si
+      <input type="radio" id="preg1" name="Cursa">No
+    </div>
+
+    <div>
+      <label for="preg2">¿Queres recibir material didáctico?</label>
+      <input type="checkbox" id="preg2">Si
+    </div>
+
+    <div>
+      <label for="comentarios">Comentarios</label>
+      <Textarea placeholder="Quisiera indicar que..." id="comentarios"></Textarea>
+    </div>
+
+    <input type="submit" value="Enviar">
+
+  </form>
+
+
+</body>
+
+</html>

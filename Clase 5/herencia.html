@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herencia</title>
+
+  <style>
+
+    body {
+      color: rgb(148, 223, 119);
+    }
+
+    h2 {
+      color: aquamarine;
+    }
+
+    p {
+      /* No quisiera que el párrafo herede el color */
+      color: initial;
+    }
+
+    p a {
+      /* Obligo a que herede el color del padre */
+      color: inherit;
+    }
+
+    /*
+    h1, h2, p {
+      color: blue;
+    }
+    */
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Titulo</h1>
+
+  <h2>Subtitulo</h2>
+
+  <p>Se hereda en general toda propiedad que afecte al texto <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference">Ver referencia de CSS</a></p>
+
+</body>
+
+</html>
