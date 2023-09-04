@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* Contempa el borde y padding DENTRO del ancho del elemento, si el elemento mide 50%, entonces se contemplan dentro, sino, se sumaria */
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+
+img {
+  /* Su maximo ancho debe ser hasta el 100% del PADRE */
+  max-width: 100%;
+  height: auto;
+}
+
+#hero {
+  height: 100px;
+
+  display: flex;
+  /* Distribuye horizontalmente a sus hijos */
+  justify-content: center;
+  /* Distribuye verticalmente a sus hijos */
+  align-items: center;
+}
+
+#nosotros {
+  display: flex;
+
+  /* Necesario para mobile, para que hijos se hagan multilinea */
+  flex-wrap: wrap;
+}
+
+#nosotros .col {
+  flex-basis: 100%;
+}
+
+#productos {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 5px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container{
+    max-width: 720px;
+    margin: auto;
+  }
+
+  #nosotros .col {
+    flex-basis: 50%;
+  }
+
+  #productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  #productos img:nth-child(1) {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  #productos img:nth-child(2) {
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
+
+  #productos img:nth-child(6) {
+    grid-column: 2/3;
+    grid-row: 3/5;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container{
+    max-width: 1120px;
+    margin: auto;
+  }
+
+  #nosotros .col:nth-child(1) {
+    flex-basis: 40%;
+  }
+  
+  #nosotros .col:nth-child(2) {
+    flex-basis: 60%;
+  }
+
+  #productos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  #productos img:nth-child(1) {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  #productos img:nth-child(2) {
+    grid-column: 4/6;
+    grid-row: 1/2;
+  }
+
+  #productos img:nth-child(6) {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
+
+}
