@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input[type="radio"]:checked {
+      box-shadow: 0 0 0 3px orange;
+    }
+
+    input[type="checkbox"]:checked {
+      box-shadow: 0 0 0 3px orange;
+    }
+
+    /* Todos los DIV que NO tengan la clase .col les va a aplicar este efecto */
+    div:not(.col) {
+      color: blue;
+    }
+
+    p:first-letter {
+      font-size: 50px;
+    }
+
+    li:nth-child(odd) {
+      color: red;
+    }
+
+    span:nth-child(2) {
+      border-left: 1px red solid;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="radio">Seleccioname
+  <input type="checkbox">¿Acepta?
+
+  <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error libero labore minima! Sapiente nobis
+      repellendus expedita voluptates facilis? Molestias recusandae aut similique amet iure enim suscipit cum fuga ad?
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+  </div>
+
+  <div class="col">
+    Columna
+  </div>
+
+  <ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+  </ul>
+
+  <div>
+    <span>1</span> <span>2</span>
+  </div>
+</body>
+
+</html>

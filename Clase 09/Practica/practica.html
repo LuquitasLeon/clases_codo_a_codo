@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="contenedor">
+
+    <header>
+      <img src="https://picsum.photos/64" alt="">
+
+      <nav>
+        <ul>
+          <li><a href="">Item 1</a></li>
+          <li><a href="">Item 2</a></li>
+          <li><a href="">Item 3</a></li>
+          <li><a href="">Item 4</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <main>
+      <div id="hero">
+        <h1>Mi pagina web</h1>
+      </div>
+
+      <section id="nosotros">
+        <div>
+          <h2>Nosotros</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit assumenda ex soluta vitae, eveniet, molestias,
+            unde necessitatibus natus doloremque hic commodi asperiores magnam. Sequi rem, architecto error voluptate ut
+            quas.</p>
+          <a href="">Ver mas</a>
+        </div>
+        <div>
+          <img src="https://picsum.photos/800/500" alt="">
+        </div>
+      </section>
+
+      <section id="galeria">
+        <img src="https://picsum.photos/600?random=1" alt="" class="imagenDestacada">
+        <img src="https://picsum.photos/600?random=2" alt="">
+        <img src="https://picsum.photos/600/300?random=3" alt="">
+        <img src="https://picsum.photos/600?random=4" alt="">
+        <img src="https://picsum.photos/600?random=5" alt="">
+        <img src="https://picsum.photos/600?random=6" alt="">
+        <img src="https://picsum.photos/600?random=7" alt="">
+        <img src="https://picsum.photos/600?random=8" alt="">
+        <img src="https://picsum.photos/600?random=9" alt="">
+        <img src="https://picsum.photos/600?random=10" alt="">
+        <img src="https://picsum.photos/600?random=11" alt="">
+      </section>
+    </main>
+
+    <footer>
+      <p>Terminos y condiciones. <span id="año"></span></p>
+      <ul>
+        <li><a href="">FB</a></li>
+      </ul>
+    </footer>
+
+  </div>
+</body>
+
+<script>
+  const añoElemento = document.getElementById("año");
+  const añoAct = new Date().getFullYear();
+
+  añoElemento.textContent = añoAct;
+</script>
+
+</html>
