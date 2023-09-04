@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    .padre {
+      display: flex;
+      background-color: gainsboro;
+      padding: 5px;
+    }
+
+    ul {
+      /* Quito las viñetas */
+      list-style: none;
+      padding: 0;
+    }
+
+    li,
+    div {
+      border: solid 1px;
+      background-color: aqua;
+    }
+
+    #menu {
+      height: 100px;
+      /* Pros padre flex */
+
+      /* Distribuye horizontalmente a sus hijos */
+      justify-content: center;
+
+      /* Distribuye verticalmente a sus hijos */
+      align-items: center;
+    }
+
+    #menu li {
+      padding: 5px;
+    }
+
+    #menu2 {
+      height: 100px;
+
+      /* Props padre flex */
+      flex-wrap: wrap;
+
+      /* Distribuye verticalmente a sus hijos multilinea */
+      align-content: center;
+
+    }
+
+    #productos {
+      width: 400px;
+    }
+
+    /* Hijos flex de productos */
+    #productos div {
+      /* flex-basis: 150px; */
+
+      width: 50%;
+
+      /* flex: 0 1 auto */
+
+      /* Permite achicarse */
+      flex-shrink: 1;
+
+      /* Permite crecer */
+      flex-grow: 1;
+    }
+
+    #productos div:nth-child(1) {
+      width: 25%;
+    }
+    #productos div:nth-child(2) {
+      width: 75%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="padre" id="productos">
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, ducimus.
+    </div>
+
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro molestias minus facilis eligendi amet cumque at!
+      Necessitatibus nemo quaerat ullam!
+    </div>
+  </section>
+
+  <br>
+
+  <ul class="padre" id="menu">
+    <li>Inicio</li>
+    <li>Productos</li>
+    <li>Servicios</li>
+    <li>Salir</li>
+  </ul>
+
+  <ul class="padre" id="menu2">
+    <li>Inicio</li>
+    <li>Productos</li>
+    <li>Servicios</li>
+    <li>Salir</li>
+    <li>Inicio</li>
+    <li>Productos</li>
+    <li>Servicios</li>
+    <li>Salir</li>
+  </ul>
+
+</body>
+
+</html>

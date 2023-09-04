@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 100px auto 50px;
+      grid-template-areas: "enc enc" "ads princ" "pie pie";
+    }
+
+    header {
+      grid-area: enc;
+      background-color: #cacaca;
+    }
+
+    aside {
+      grid-area: ads;
+      background-color: cadetblue;
+    }
+
+    main {
+      grid-area: princ;
+      background-color: burlywood;
+      padding: 10px;
+    }
+
+    footer {
+      grid-area: pie;
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="contenedor grid">
+    <header>
+      <h1>Mi pagina web</h1>
+    </header>
+
+    <aside>
+      Cursá en Codo a codo!
+    </aside>
+
+    <main>
+      <section>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor totam dolorem laudantium ipsum, ratione ab
+        inventore, commodi molestiae minima maxime alias aut obcaecati deserunt recusandae deleniti nobis pariatur
+        tenetur non.
+        Cum nam incidunt error. Voluptatibus quaerat consectetur voluptatem mollitia nobis delectus! Veritatis
+        consequuntur nihil debitis sed animi quam eaque amet expedita? Enim vero at, deleniti perspiciatis saepe
+        repellat omnis perferendis.
+        Quos debitis dolorum repellat non nam et officiis. Itaque voluptates ipsam incidunt libero reprehenderit
+        distinctio adipisci. Aliquam reprehenderit sequi voluptates neque hic corporis laborum minus iure magni ipsa,
+        quaerat nostrum.
+        Dicta velit placeat tenetur ipsam reiciendis ab vero a dolorum! Officia magnam error fugit alias porro voluptate
+        consectetur quae perspiciatis nobis corrupti, nesciunt voluptatibus exercitationem rerum praesentium, dolorem
+        culpa unde!
+        Mollitia facilis minus omnis, labore qui laborum blanditiis reiciendis quas accusamus eos quibusdam deserunt
+        facere quod, ullam nostrum quam nemo doloribus animi amet ut voluptate. Eaque blanditiis vero temporibus dicta!
+      </section>
+      <section>
+        Seccion 2
+      </section>
+    </main>
+
+    <footer>
+      pie
+    </footer>
+  </div>
+
+
+</body>
+
+</html>
