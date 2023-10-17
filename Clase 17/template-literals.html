@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <div class="col">
+
+   </div>
+
+   <script>
+
+      let persona = {
+         nombre: "Lucas",
+         localidad: "Tucuman",
+         profesion: "Estudiante",
+         descripcion: "Entusiasta del desarrollo web desde hace 25 años."
+      }
+      /* OLD WAY
+      let nombre = persona.nombre
+      let localidad = persona.localidad
+      let profesion = persona.profesion
+      */
+
+      // NEW WAY (desconstructuración)
+      let { nombre, localidad: l, profesion, descripcion } = persona
+
+      // Creo el fragmento que quiero agregar al codigo
+      let fragmento = `
+                  <div>
+                     <h1> Me llamo ${nombre}, soy de ${l} y soy ${persona.profesion} </h1>
+                     <p>${descripcion}</p>
+                  </div>
+                  `
+
+      // Selecciono la etiqueta en donde se pondrá el contenido
+      let contenedor = document.querySelector(".col")
+
+      // Pongo el contenido en el padre elegido, en este caso la clase col
+      contenedor.innerHTML = fragmento
+   </script>
+</body>
+
+</html>

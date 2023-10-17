@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      #estudiantes {
+         display: flex;
+         flex-wrap: wrap;
+      }
+   </style>
+</head>
+
+<body>
+
+   <section id="estudiantes">
+      <!--  Cargaran los datos de forma dinamica -->
+   </section>
+
+   <button>Ver activos</button> <br>
+   <label for="edad?">Desde que edad</label>
+   <input id="edad?" type="number">
+
+   <script>
+      // DATOS
+      const estudiantes = [
+         { id: 1, nombre: "Rodri", edad: 19, status: true },
+         { id: 2, nombre: "Valen", edad: 23, status: true },
+         { id: 3, nombre: "Car", edad: 20, status: true },
+         { id: 4, nombre: "Lu", edad: 25, status: false },
+         { id: 5, nombre: "Guille", edad: 32, status: true },
+         { id: 6, nombre: "Nico", edad: 28, status: false }
+      ];
+
+      // Selecciono donde se volcaran los datos
+      let contenedor = document.querySelector("#estudiantes")
+
+      // Creo una variable donde se almacenaran todos los datos
+      let contenido = ""
+
+      // Recorro el array, y por cada estudiante extraigo sus datos y creo un fragmento de html
+      estudiantes.forEach(estudiante => {
+
+         contenido += `
+            <div>
+               <h2>${estudiante.nombre}</h2>
+               <ul>
+                  <li>Edad: ${estudiante.edad}</li>
+                  <li>Status: ${estudiante.status}</li>
+               </ul>
+            </div>
+         `
+
+         // Por cada recorrido, hasta el final escribira el HTML finalizado.
+         contenedor.innerHTML = contenido
+
+      }) // fin forEach
+
+      let boton = document.querySelector("button")
+
+      boton.addEventListener("click", cargarActivos)
+
+      function cargarActivos() {
+
+         let filtrados = estudiantes.filter(obj => obj.status == true)
+         // console.log(filtrados)
+
+         let contenido = ""
+
+         filtrados.forEach(obj => {
+
+            contenido += `
+               <div>
+                  <h2>${obj.nombre}</h2>
+                  <ul>
+                     <li>Edad: ${obj.edad}</li>
+                     <li>Status: ${obj.status}</li>
+                  </ul>
+               </div>
+            `
+
+            contenedor.innerHTML = contenido
+         })
+
+      }
+   </script>
+
+</body>
+
+</html>

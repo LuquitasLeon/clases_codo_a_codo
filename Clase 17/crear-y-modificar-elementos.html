@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <div>
+
+   </div>
+
+   <script>
+      
+      let parrafo = document.createElement("p")
+      parrafo.innerText = "Lorem ipsum y todo lo demas en latin"
+
+      let cuerpo = document.querySelector("body")
+      cuerpo.appendChild(parrafo)
+
+      cuerpo.style.color = "red"
+      cuerpo.style.fontSize = "40px"
+
+      parrafo.style.fontFamily = "Arial"
+
+      let divisor = document.querySelector("div")
+      divisor.innerHTML = "<h2>Mi página web</h2> <p>Probando 123 \n fsdfsdfsd</p>"
+
+   </script>
+
+</body>
+
+</html>
