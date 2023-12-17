@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head")  %>
+
+<body>
+
+   <h1> <%= titulo %> </h1>
+
+   <ul>
+      <% productos.forEach((item)=> { %>
+         <li>
+            <h2>
+               Producto: <%= item.producto %>
+            </h2>
+            <p>
+               Precio: ARS$ <%= item.precio * dolar %>
+            </p>
+         </li>
+      <% }) %>
+   </ul>
+
+
+   <%- include("partials/footer")  %>
+</body>
+
+</html>

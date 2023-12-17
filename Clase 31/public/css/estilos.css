@@ -1,0 +1,23 @@
+form div {
+  margin: 10px 0;
+}
+
+form div label {
+  width: 200px;
+}
+
+/* Para que la imagen se adapte dentro de su contenedor (padre) */
+img {
+  width: 100%;
+  height: auto;
+}
+
+.contenedor {
+  margin: auto;
+  max-width: 1200px;
+}
+
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}

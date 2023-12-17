@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/estilos.css">
+   <title>
+      <%= titulo %>
+   </title>
+</head>
+
+<body>
+   <h1>
+      <%= titulo %>
+   </h1>
+
+   <% if (huboError) { %>
+      <p>Hay errores, corregir lo siguiente</p>
+      <ul>
+         <% errores.forEach(err => { %>
+            <li>
+               <%= err.msg %>
+            </li>
+         <% }) %>
+      </ul>
+   <% } %>
+
+   <% if (!gracias) { %>
+      <form action="/agregar" method="post" enctype="multipart/form-data">
+         <div>
+            <label for="">Descripcion</label>
+            <input type="text" name="descripcion">
+         </div>
+         <div>
+            <input type="file" name="foto" accept="image/png, image/jpeg">
+         </div>
+         <input type="submit" value="Agregar">
+      
+      </form>
+   <% } else { %>
+      <p>Gracias. <a href="/todas">Ver todas las imágenes</a></p>
+   <% } %>
+</body>
+
+</html>

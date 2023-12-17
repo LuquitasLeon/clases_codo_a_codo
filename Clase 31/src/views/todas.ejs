@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/estilos.css">
+   <title>Todas las imagenes</title>
+   <style>
+      
+   </style>
+</head>
+
+<body>
+   <div class="contenedor">
+      <h1>Galeria de imagenes</h1>
+
+      <% if(datos) { %>
+         <a href="/agregar">Agregar una imagen</a>
+
+         <ul id="galeria">
+            <% datos.forEach(imagen=> { %>
+               <li>
+                  <strong>ID: <%= imagen.id %></strong>
+                  <img src="/uploads/<%= imagen.nombre %>" alt="<%= imagen.nombre %>">
+                  <p>
+                     <%= imagen.descripcion %>
+                  </p>
+               </li>
+      
+               <% }) %>
+         </ul>
+
+         <a href="/agregar">Agregar una imagen</a>
+
+      <% } else { %>
+         <p> No hay imágenes cargadas. </p>
+         <a href="/agregar">Agregar una imagen</a>
+      <% } %>
+   </div>
+
+</body>
+
+</html>

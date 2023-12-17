@@ -1,0 +1,14 @@
+{
+  "name": "uso-de-npm",
+  "version": "1.0.0",
+  "description": "Ejemplo de uso de modulos de terceros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Leon",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <%- include("partials/head")  %>
+
+<body>
+   <h1>
+      <%= titulo %>
+   </h1>
+
+   <hr>
+
+   <p><%- dolar >= 1000 ? 'Superó al hornero' : 'El hornero esta más alto' %></p>
+
+
+   <hr>
+
+   <div class="producto">
+      <img src="https://picsum.photos/150" alt="">
+
+      <% if (promocion) { %>
+         <p>
+            <%= promocionTexto %>
+         </p>
+      <% } else { %>
+         <p>No hay promoción vigente</p>
+      <% } %>
+   </div>
+
+   <hr>
+   
+   <%- include("partials/footer")  %>
+   
+</body>
+
+</html>
